@@ -5,7 +5,7 @@ implements along with gorilla/sessions and go-redis/redis, and with boj/redistor
 
 >`import redisbackendhttpsessionstore "github.com/stackdocker/http-session-redis-sentinel-backend"`
 
-## Redis Sentinel test
+## Redis Sentinel client
 
 * redis_cli
 
@@ -15,9 +15,33 @@ implements along with gorilla/sessions and go-redis/redis, and with boj/redistor
 
   like `echo -e 'ping\r\nquit\r\n' | nc 127.0.0.1 26379`
   
-## Golang redis and sentinel simple client
+## Golang redis and sentinel simple test client
 
-   _cli_ subdir
+  _cli_ subdir
+   
+  redis client command example
+   
+>`tangfx@clschool:~/workspace/goprojects/src/github.com/stackdocker/http-session-redis-sentinel-backend/cli (master) $ go run redis-client-simple.go --redis-master 191.168.0.1:6379`
+
+>`PONG <nil>`
+
+>`PONG <nil> ---- PING: PONG`
+
+>`key value`
+
+>`key2 does not exists`
+
+  sentinel client command example
+
+>`tangfx@clschool:~/workspace/goprojects/src/github.com/stackdocker/http-session-redis-sentinel-backend/cli (master) $ go run sentinel-client-simple.go --address 172.31.33.2:26379,172.31.33.3:26379`
+
+>`Step 1, ping each Sentinel separately...`
+
+>`PONG <nil> ---- PING: PONG`
+
+>`PONG <nil> ---- PING: PONG`
+
+>`Step 2, ping Sentinel cluster...`
 
 ## Golang http server demo session with Redis and/or Sentinel backend
 
