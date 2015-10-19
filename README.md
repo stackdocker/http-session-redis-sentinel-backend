@@ -8,7 +8,8 @@ implements along with gorilla/sessions and go-redis/redis, and with boj/redistor
 ## Redis Sentinel test
 
 * redis_cli
-  install by apt-get or
+
+  `sudo apt-get install redis-tools` or ...
 
 * nc 
 
