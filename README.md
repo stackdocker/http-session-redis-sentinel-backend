@@ -14,14 +14,16 @@ implements along with gorilla/sessions and go-redis/redis, and with boj/redistor
 
   like `echo -e 'ping\r\nquit\r\n' | nc 127.0.0.1 26379`
   
-### Golang client demo
+## Golang redis and sentinel simple client
 
-  show in _cli_ sub-directory
+   _cli_ subdir
 
-## Golang Http server demo session with Redis and/or Sentinel backend
+## Golang http server demo session with Redis and/or Sentinel backend
+
+   _wui_ subdir
 
 ### System environment variable
-PORT, and default is 80
+PORT, default value is 80
 
 ### Run from source code 
 >`$ PORT=8080 go run demo-http-session-redis.go  --sentinel-mode false --redis-addr 192.168.0.1:6379`
