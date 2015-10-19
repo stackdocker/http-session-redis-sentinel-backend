@@ -51,7 +51,7 @@ or
 >`Failed to create connection! Please contact SysOps`
 
 * Attention
-* 
+
 The unexpected thing showing previous command is underlying go-redis v3 client library will try connect internal Redis address.
 and spend a few time to exit.
 
