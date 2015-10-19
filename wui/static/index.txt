@@ -1,0 +1,4 @@
+This is a demo about storing session in Redis (or Sentinel)
+
+You may sign up, or login. 
+If you logout, then remove private data

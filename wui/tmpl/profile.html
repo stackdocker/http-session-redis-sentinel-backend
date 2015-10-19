@@ -1,0 +1,8 @@
+{{define "head"}}<title>profile</title>{{end}}
+{{define "body"}}
+    <p>[<a href="/index.html">home</a>]</p>
+    <div>{{template "signout" .}}</div>
+    <div>{{template "profile" .}}</div>{{end}}
+{{define "profile"}}
+    <p>{{.Title}}</p>
+    <p>{{printf "%s" .Body}}</p>{{end}}

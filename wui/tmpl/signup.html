@@ -1,0 +1,10 @@
+{{define "head"}}<title>signup</title>{{end}}
+{{define "body"}}
+    <h1>{{.Title}}</h1>
+    {{template "signup" .}}{{end}}
+{{define "signup"}}
+    <form action="/signup/baseauth" method="POST">
+        <div><input type="text" name="user" value='{{printf "%s" .Body}}'/></div>
+        <div><input type="password" name="password"/></div>
+        <div><input type="submit" value="signup"/></div>
+    </form>{{end}}

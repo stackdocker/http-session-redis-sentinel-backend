@@ -1,0 +1,8 @@
+{{define "head"}}<title>signin</title>{{end}}
+{{define "body"}}
+    <h1>{{.Title}}</h1>
+    <form action="/signin/action" method="POST">
+        <div><input type="text" name="user" value='{{printf "%s" .Body}}'/></div>
+        <div><input type="password" name="password"/></div>
+        <div><input type="submit" value="signin"/></div>
+    </form>{{end}}

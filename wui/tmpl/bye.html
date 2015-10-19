@@ -1,0 +1,9 @@
+{{define "head"}}<title>bye</title>{{end}}
+{{define "body"}}<body>
+        <div>[<a href="/index.html">home</a>] [<a href="/signin/baseauth">sing in</a>] [<a href="/signup/baseauth">sing up</a>]</div>
+        <h1>{{.Title}}</h1>
+        <p>{{printf "%s" .Body}}</p>
+        <!--<p>Enjoy this demo, feel free to 
+            <a href="mailto:tangfx128@gmail.com?Subject=http%20session%20redis%20sentinel%20backend%20demo"
+               target="_top">feedback</a></p>-->
+    </body>{{end}}
