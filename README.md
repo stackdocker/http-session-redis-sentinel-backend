@@ -62,5 +62,9 @@ or with DNAT to forward data packages to backend
 
 After _go build_ or _go install_, copy _secret, static, tmpl_ sub-directories in where executable is located
 
+* secret dir, hold a authentication file
+* static dir, simple content for index.html
+* tmpl dir, Golang http/template format 
+
 
 
