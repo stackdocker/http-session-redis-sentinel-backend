@@ -51,10 +51,11 @@ or
 >`Failed to create connection! Please contact SysOps`
 
 * Attention
-The unexpected thing showing previous command, that go-redis v3 client library will try connect internal Redis address.
+* 
+The unexpected thing showing previous command is underlying go-redis v3 client library will try connect internal Redis address.
 and spend a few time to exit.
 
-The case shows Client program must communicate with Redis and Sentinel cluster, thus should configured with same subnet,
+The case shows program must communicate with Redis and Sentinel cluster, thus should configured with same subnet,
 or with DNAT to forward data packages to backend
 
 ### How to build
