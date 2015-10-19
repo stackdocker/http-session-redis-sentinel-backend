@@ -1,11 +1,15 @@
 # http-session-redis-sentinel-backend
 implements along with gorilla/sessions and go-redis/redis, and with boj/redistore nested
 
-## How to import
+## Getting source into Golang project 引入项目
+
+>`go get github.com/stackdocker/http-session-redis-sentinel-backend`
+
+## How to import 导入包名
 
 >`import redisbackendhttpsessionstore "github.com/stackdocker/http-session-redis-sentinel-backend"`
 
-## Redis Sentinel client
+## Redis Sentinel client 客户端工具
 
 * redis_cli
 
@@ -15,11 +19,11 @@ implements along with gorilla/sessions and go-redis/redis, and with boj/redistor
 
   like `echo -e 'ping\r\nquit\r\n' | nc 127.0.0.1 26379`
   
-## Golang redis and sentinel simple test client
+## Golang redis and sentinel simple test client 内置客户端简单测试程序
 
   _cli_ subdir
    
-  redis client command example
+  redis client command example 运行示例
    
 >`tangfx@clschool:~/workspace/goprojects/src/github.com/stackdocker/http-session-redis-sentinel-backend/cli (master) $ go run redis-client-simple.go --redis-master 191.168.0.1:6379`
 
@@ -31,7 +35,7 @@ implements along with gorilla/sessions and go-redis/redis, and with boj/redistor
 
 >`key2 does not exists`
 
-  sentinel client command example
+  sentinel client command example 运行示例
 
 >`tangfx@clschool:~/workspace/goprojects/src/github.com/stackdocker/http-session-redis-sentinel-backend/cli (master) $ go run sentinel-client-simple.go --address 172.31.33.2:26379,172.31.33.3:26379`
 
@@ -43,14 +47,14 @@ implements along with gorilla/sessions and go-redis/redis, and with boj/redistor
 
 >`Step 2, ping Sentinel cluster...`
 
-## Golang http server demo session with Redis and/or Sentinel backend
+## Golang http server demo session with Redis and/or Sentinel backend 服务器程序示例
 
    _wui_ subdir
 
-### System environment variable
+### System environment variable 环境变量
 PORT, default value is 80
 
-### Run from source code 
+### Run from source code 运行示例
 >`$ PORT=8080 go run demo-http-session-redis.go  --sentinel-mode false --redis-addr 192.168.0.1:6379`
 
 >`Listening on port 8080`
@@ -77,7 +81,7 @@ or
 
 >`Failed to create connection! Please contact SysOps`
 
-* Attention
+* Attention 注意
 
 The unexpected thing showing previous command is underlying go-redis v3 client library will try connect internal Redis address.
 and spend a few time to exit.
@@ -85,13 +89,13 @@ and spend a few time to exit.
 The case shows program must communicate with Redis and Sentinel cluster, thus should configured with same subnet,
 or with DNAT to forward data packages to backend
 
-### How to build
+### How to build 编译生成
 
-After _go build_ or _go install_, copy _secret, static, tmpl_ sub-directories in where executable is located
+After _go build_ or _go install_, copy _secret, static, tmpl_ sub-dirs in where executable is located
 
-* secret dir, hold a authentication file
-* static dir, simple content for index.html
-* tmpl dir, Golang http/template format 
+* secret dir, hold a authentication file 该子目录包含密码文件
+* static dir, simple content for index.html  该子目录为主页的静态内容
+* tmpl dir, Golang http/template format  该子目录是模板文件
 
 
 
