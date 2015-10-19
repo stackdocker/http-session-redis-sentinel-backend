@@ -1,6 +1,8 @@
 # http-session-redis-sentinel-backend
 implements along with gorilla/sessions and go-redis/redis, and with boj/redistore nested
 
+代码基于前2个项目实现, 并继承了后1个项目的结构类型
+
 ## Getting source into Golang project 引入项目
 
 >`go get github.com/stackdocker/http-session-redis-sentinel-backend`
