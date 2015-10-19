@@ -25,19 +25,29 @@ PORT, and default is 80
 
 ### Run from source code 
 >`$ PORT=8080 go run demo-http-session-redis.go  --sentinel-mode false --redis-addr 192.168.0.1:6379`
+
 >`Listening on port 8080`
+
 >`logger: demo-http-session-redis.go:182: GET /index.html index`
+
 >`logger: demo-http-session-redis.go:254: session=6B3AHP3RBJ6HBS2KWWFQPN5S6IM4TMT33`
 
 or
 
 >`$ go run demo-http-session-redis.go --sentinel-mode true --master-name mymaster --sentinel-ips 172.31.33.2:26379,172.31.33.3:26379`
+
 >`Waiting Redis Sentiel connection`
+
 >`2015/10/19 17:04:34 redis-sentinel: discovered new "mymaster" sentinel: 10.120.1.3:26379`
+
 >`2015/10/19 17:04:34 redis-sentinel: discovered new "mymaster" sentinel: 10.120.1.4:26379`
+
 >`2015/10/19 17:04:34 redis-sentinel: "mymaster" addr is 10.120.1.5:6379`
+
 >`Sentinel currently unable to response,  please try Ping laterly when to access`
+
 >`2015/10/19 17:06:42 redis-sentinel: "mymaster" addr is 10.120.1.5:6379`
+
 >`Failed to create connection! Please contact SysOps`
 
 * Attention
