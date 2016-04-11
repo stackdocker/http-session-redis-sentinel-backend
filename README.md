@@ -21,6 +21,10 @@ implements along with gorilla/sessions and go-redis/redis, and with boj/redistor
 
   like `echo -e 'ping\r\nquit\r\n' | nc 127.0.0.1 26379`
   
+* curl
+
+  `echo -e "INFO\r\nQUIT\r\n" | curl telnet://127.0.0.1:6379`
+  
 ## Golang redis and sentinel simple test client 内置客户端简单测试程序
 
   _cli_ subdir
